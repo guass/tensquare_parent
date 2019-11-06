@@ -1,0 +1,266 @@
+2019-10-28 23:08:04 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 11884 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:08:04 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:08:05 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner  ] : No MyBatis mapper was found in '[com.tensquare.base]' package. Please check your configuration.
+2019-10-28 23:08:05 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:08:05 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 66ms. Found 1 repository interfaces.
+2019-10-28 23:08:06 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1a2e98f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:08:06 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:08:06 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:08:06 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:08:06 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:08:06 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1733 ms
+2019-10-28 23:08:07 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:08:07 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:08:07 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:08:07 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:08:07 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:08:07 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:08:08 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:08:08 [main] WARN  [amework.context.support.AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tensquare.base.dao.TbLabelMapper2' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-10-28 23:08:08 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:08:08 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:08:08 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Stopping service [Tomcat]
+2019-10-28 23:08:08 [main] INFO  [e.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-28 23:09:39 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 2952 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:09:39 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:09:40 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner  ] : No MyBatis mapper was found in '[com.tensquare.base]' package. Please check your configuration.
+2019-10-28 23:09:40 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:09:40 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 63ms. Found 1 repository interfaces.
+2019-10-28 23:09:40 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1a2e98f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:09:41 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:09:41 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:09:41 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:09:41 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:09:41 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1746 ms
+2019-10-28 23:09:42 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:09:42 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:09:42 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:09:42 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:09:42 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:09:42 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:09:43 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:09:43 [main] WARN  [amework.context.support.AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tensquare.base.dao.TbLabelMapper2' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-10-28 23:09:43 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:09:43 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:09:43 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Stopping service [Tomcat]
+2019-10-28 23:09:43 [main] INFO  [e.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-28 23:11:10 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 13648 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:11:10 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:11:10 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner  ] : No MyBatis mapper was found in '[com.tensquare.base]' package. Please check your configuration.
+2019-10-28 23:11:10 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:11:10 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 57ms. Found 1 repository interfaces.
+2019-10-28 23:11:11 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5d74cbd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:11:11 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:11:11 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:11:11 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:11:11 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:11:11 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1549 ms
+2019-10-28 23:11:12 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:11:12 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:11:12 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:11:12 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:11:12 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:11:12 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:11:13 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:11:13 [main] WARN  [amework.context.support.AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tensquare.base.dao.TbLabelMapper2' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-10-28 23:11:13 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:11:13 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:11:13 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Stopping service [Tomcat]
+2019-10-28 23:11:13 [main] INFO  [e.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-28 23:14:36 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 8800 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:14:36 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:14:36 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner  ] : No MyBatis mapper was found in '[com.tensquare.base]' package. Please check your configuration.
+2019-10-28 23:14:36 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:14:37 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 69ms. Found 1 repository interfaces.
+2019-10-28 23:14:37 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ec1d6b89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:14:37 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:14:37 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:14:37 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:14:37 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:14:37 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1714 ms
+2019-10-28 23:14:38 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:14:38 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:14:38 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:14:38 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:14:39 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:14:39 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:14:39 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:14:40 [main] WARN  [amework.context.support.AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tensquare.base.dao.TbLabelMapper2' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-10-28 23:14:40 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:14:40 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:14:40 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Stopping service [Tomcat]
+2019-10-28 23:14:40 [main] INFO  [e.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-28 23:16:50 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 1904 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:16:50 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:16:51 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner  ] : No MyBatis mapper was found in '[com.tensquare.base]' package. Please check your configuration.
+2019-10-28 23:16:51 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:16:51 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 74ms. Found 1 repository interfaces.
+2019-10-28 23:16:51 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2d12bfd4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:16:52 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:16:52 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:16:52 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:16:52 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:16:52 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1759 ms
+2019-10-28 23:16:53 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:16:53 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:16:53 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:16:53 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:16:53 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:16:53 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:16:54 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:16:54 [main] WARN  [amework.context.support.AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tensquare.base.dao.TbLabelMapper2' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-10-28 23:16:54 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:16:54 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:16:54 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Stopping service [Tomcat]
+2019-10-28 23:16:54 [main] INFO  [e.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-28 23:18:24 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 14248 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:18:24 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:18:25 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:18:25 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 64ms. Found 1 repository interfaces.
+2019-10-28 23:18:25 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$32d24e25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:18:26 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:18:26 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:18:26 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:18:26 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:18:26 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1706 ms
+2019-10-28 23:18:27 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:18:27 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:18:27 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:18:27 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:18:27 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:18:27 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:18:28 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:18:29 [main] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:18:29 [main] WARN  [uration$JpaWebConfiguration$JpaWebMvcConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-28 23:18:29 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat started on port(s): 9001 (http) with context path ''
+2019-10-28 23:18:29 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started BaseApplication in 6.05 seconds (JVM running for 7.326)
+2019-10-28 23:19:10 [http-nio-9001-exec-2] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 23:19:10 [http-nio-9001-exec-2] INFO  [org.springframework.web.servlet.FrameworkServlet  ] : Initializing Servlet 'dispatcherServlet'
+2019-10-28 23:19:10 [http-nio-9001-exec-2] INFO  [org.springframework.web.servlet.FrameworkServlet  ] : Completed initialization in 9 ms
+2019-10-28 23:22:00 [Thread-15] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:22:00 [Thread-15] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:22:00 [Thread-15] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:22:07 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 16968 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:22:07 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:22:07 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:22:08 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 76ms. Found 1 repository interfaces.
+2019-10-28 23:22:08 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$35cbcdb7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:22:08 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:22:08 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:22:08 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:22:09 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:22:09 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1965 ms
+2019-10-28 23:22:10 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:22:10 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:22:10 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:22:10 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:22:10 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:22:10 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:22:11 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:22:12 [main] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:22:12 [main] WARN  [uration$JpaWebConfiguration$JpaWebMvcConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-28 23:22:12 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat started on port(s): 9001 (http) with context path ''
+2019-10-28 23:22:12 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started BaseApplication in 6.621 seconds (JVM running for 7.879)
+2019-10-28 23:23:25 [Thread-16] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:23:25 [Thread-16] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:23:25 [Thread-16] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:23:33 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 5992 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:23:33 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:23:33 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:23:33 [main] WARN  [amework.context.support.AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'ILableDao' defined in null: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] for bean 'ILableDao': There is already [Generic bean: class [org.mybatis.spring.mapper.MapperFactoryBean]; scope=singleton; abstract=false; lazyInit=false; autowireMode=2; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\bigmi\tensquare_parent\tensquare_base\target\classes\com\tensquare\base\dao\ILableDao.class]] bound.
+2019-10-28 23:23:33 [main] INFO  [e.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-28 23:24:46 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 19028 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:24:46 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:24:47 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:24:47 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-10-28 23:24:47 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6f5699ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:24:48 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:24:48 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:24:48 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:24:48 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:24:48 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1599 ms
+2019-10-28 23:24:49 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:24:49 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:24:49 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:24:49 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:24:49 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:24:49 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:24:50 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:24:51 [main] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:24:51 [main] WARN  [uration$JpaWebConfiguration$JpaWebMvcConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-28 23:24:51 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat started on port(s): 9001 (http) with context path ''
+2019-10-28 23:24:51 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started BaseApplication in 5.426 seconds (JVM running for 6.573)
+2019-10-28 23:25:05 [http-nio-9001-exec-1] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 23:25:05 [http-nio-9001-exec-1] INFO  [org.springframework.web.servlet.FrameworkServlet  ] : Initializing Servlet 'dispatcherServlet'
+2019-10-28 23:25:05 [http-nio-9001-exec-1] INFO  [org.springframework.web.servlet.FrameworkServlet  ] : Completed initialization in 10 ms
+2019-10-28 23:28:58 [Thread-13] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:28:58 [Thread-13] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:28:58 [Thread-13] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:31:24 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 13672 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:31:24 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:31:25 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-28 23:31:25 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-10-28 23:31:25 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a491ed1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-28 23:31:25 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:31:26 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:31:26 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:31:26 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:31:26 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1669 ms
+2019-10-28 23:31:26 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-10-28 23:31:27 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper         ] : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 23:31:27 [main] INFO  [org.hibernate.Version                             ] : HHH000412: Hibernate Core {5.3.10.Final}
+2019-10-28 23:31:27 [main] INFO  [org.hibernate.cfg.Environment                     ] : HHH000206: hibernate.properties not found
+2019-10-28 23:31:27 [main] INFO  [tions.common.reflection.java.JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 23:31:27 [main] INFO  [org.hibernate.dialect.Dialect                     ] : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 23:31:28 [main] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:31:28 [main] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:31:28 [main] WARN  [uration$JpaWebConfiguration$JpaWebMvcConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-28 23:31:29 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat started on port(s): 9001 (http) with context path ''
+2019-10-28 23:31:29 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started BaseApplication in 5.61 seconds (JVM running for 6.747)
+2019-10-28 23:32:03 [Thread-14] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:32:03 [Thread-14] INFO  [framework.orm.jpa.AbstractEntityManagerFactoryBean] : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-28 23:32:03 [Thread-14] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
+2019-10-28 23:33:42 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting BaseApplication on guass-vw6700 with PID 1220 (E:\bigmi\tensquare_parent\tensquare_base\target\classes started by guass in E:\bigmi\tensquare_parent)
+2019-10-28 23:33:42 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-10-28 23:33:43 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat initialized with port(s): 9001 (http)
+2019-10-28 23:33:43 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting service [Tomcat]
+2019-10-28 23:33:43 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-28 23:33:43 [main] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring embedded WebApplicationContext
+2019-10-28 23:33:43 [main] INFO  [servlet.context.ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1451 ms
+2019-10-28 23:33:45 [main] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-28 23:33:45 [main] INFO  [framework.boot.web.embedded.tomcat.TomcatWebServer] : Tomcat started on port(s): 9001 (http) with context path ''
+2019-10-28 23:33:45 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started BaseApplication in 3.708 seconds (JVM running for 4.863)
+2019-10-28 23:35:44 [http-nio-9001-exec-2] INFO  [org.apache.juli.logging.DirectJDKLog              ] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 23:35:44 [http-nio-9001-exec-2] INFO  [org.springframework.web.servlet.FrameworkServlet  ] : Initializing Servlet 'dispatcherServlet'
+2019-10-28 23:35:44 [http-nio-9001-exec-2] INFO  [org.springframework.web.servlet.FrameworkServlet  ] : Completed initialization in 9 ms
+2019-10-28 23:35:45 [http-nio-9001-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
