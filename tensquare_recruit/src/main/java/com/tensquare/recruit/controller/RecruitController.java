@@ -22,12 +22,13 @@ public class RecruitController {
     @GetMapping("/get-recommed-list")
     public Result getRecommendRecruitList(){
 
-        return null;
+        Result list = recruitService.getList();
+        return list;
     }
 
     @GetMapping("/get-new-list")
     public Result getNewRecruitList(){
 
-        return null;
+        return recruitService.getList();
     }
 }

@@ -1,6 +1,7 @@
 package com.tensquare.recruit.controller;
 
 
+import com.tensquare.recruit.service.EnterpriseService;
 import com.tensquare.recruit.service.RecruitService;
 import entity.Result;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,10 +17,10 @@ import javax.annotation.Resource;
 public class EnterpriseController {
 
     @Resource
-    private RecruitService recruitService;
+    private EnterpriseService enterpriseService;
 
     @GetMapping("/get-hotent-list")
     public Result getHotList(){
-        return recruitService.getHotEnterpriseList();
+        return enterpriseService.getHotEnterpriseList();
     }
 }
