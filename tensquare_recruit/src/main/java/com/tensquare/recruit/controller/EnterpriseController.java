@@ -19,6 +19,10 @@ public class EnterpriseController {
     @Resource
     private EnterpriseService enterpriseService;
 
+    /**
+     * 获取热门企业
+     * @return
+     */
     @GetMapping("/get-hotent-list")
     public Result getHotList(){
         return enterpriseService.getHotEnterpriseList();
