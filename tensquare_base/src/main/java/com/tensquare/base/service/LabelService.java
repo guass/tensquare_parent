@@ -42,7 +42,7 @@ public class LabelService {
     }
 
 
-    public PageInfo getAllLabels(TbLabel lable, Integer page, Integer size) {
+    public PageInfo<TbLabel> getAllLabels(TbLabel lable, Integer page, Integer size) {
         PageHelper.startPage(page,size);
         List<TbLabel> tbLabels = tbLabelMapper.selectListLabel(null, null);
         PageInfo<TbLabel> pageInfo = new PageInfo<TbLabel>(tbLabels);

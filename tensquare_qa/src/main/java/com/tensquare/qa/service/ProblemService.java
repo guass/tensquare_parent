@@ -1,5 +1,6 @@
 package com.tensquare.qa.service;
 
+import com.github.pagehelper.PageInfo;
 import com.tensquare.qa.dao.TbProblemMapper;
 import com.tensquare.qa.pojo.TbProblem;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class ProblemService {
      *
      * @return
      */
-    public List<TbProblem> getNewProblemList(){
+    public PageInfo<TbProblem> getNewProblemList(String lableId){
 
         return null;
     }
@@ -27,7 +28,12 @@ public class ProblemService {
      * 热门回答
      * @return
      */
-    public List<TbProblem> getHotProblemList(){
+    public PageInfo<TbProblem> getHotProblemList(String labeId){
+
+        return null;
+    }
+
+    public PageInfo<TbProblem> getWaitProblemList(String lableId){
 
         return null;
     }

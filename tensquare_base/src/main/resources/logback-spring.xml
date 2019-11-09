@@ -49,7 +49,7 @@
         <!-- 最常用的滚动策略,每天滚动生成，它根据时间来制定滚动策略.既负责滚动也负责出发滚动 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->
-            <fileNamePattern>${LOG_HOME}\log\info.%d.log</fileNamePattern>
+            <fileNamePattern>${LOG_HOME}\log\base.info.%d.log</fileNamePattern>
             <!--<fileNamePattern>E:\workSpace\springbootTest\seller\log\info.%d.log</fileNamePattern>-->
             <!--日志文件保留天数-->
             <MaxHistory>${INFO_MAX_HISTORY}</MaxHistory>
@@ -75,7 +75,7 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志输出位置  可相对、和绝对路径 -->
             <!--<fileNamePattern>${LOG_HOME}\%d{yyyy-MM-dd}\error-log.%d{yyyy-MM-dd}.log</fileNamePattern>-->
-            <fileNamePattern>${LOG_HOME}\info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_HOME}\base.info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--<fileNamePattern>E:\software\ideaIU-2018.2.4\idea_workspace\logs\info.%d{yyyy-MM-dd}.log</fileNamePattern>-->
             <!--日志文件保留天数-->
             <maxHistory>${ERROR_MAX_HISTORY}</maxHistory>

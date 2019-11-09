@@ -75,7 +75,7 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志输出位置  可相对、和绝对路径 -->
             <!--<fileNamePattern>${LOG_HOME}\%d{yyyy-MM-dd}\error-log.%d{yyyy-MM-dd}.log</fileNamePattern>-->
-            <fileNamePattern>${LOG_HOME}\info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_HOME}\recruit.info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--<fileNamePattern>E:\software\ideaIU-2018.2.4\idea_workspace\logs\info.%d{yyyy-MM-dd}.log</fileNamePattern>-->
             <!--日志文件保留天数-->
             <maxHistory>${ERROR_MAX_HISTORY}</maxHistory>
