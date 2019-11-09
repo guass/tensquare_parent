@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tensquare.qa.dao.TbPlMapper">
+  <resultMap id="BaseResultMap" type="com.tensquare.qa.pojo.TbPlKey">
+
+    <id column="problemid" jdbcType="VARCHAR" property="problemid" />
+    <id column="labelid" jdbcType="VARCHAR" property="labelid" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="com.tensquare.qa.pojo.TbPlKey">
+
+    delete from tb_pl
+    where problemid = #{problemid,jdbcType=VARCHAR}
+      and labelid = #{labelid,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insert" parameterType="com.tensquare.qa.pojo.TbPlKey">
+    insert into tb_pl (problemid, labelid)
+    values (#{problemid,jdbcType=VARCHAR}, #{labelid,jdbcType=VARCHAR})
+  </insert>
+
+
+  <insert id="insertSelective" parameterType="com.tensquare.qa.pojo.TbPlKey">
+    insert into tb_pl
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="problemid != null">
+        problemid,
+      </if>
+      <if test="labelid != null">
+        labelid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="problemid != null">
+        #{problemid,jdbcType=VARCHAR},
+      </if>
+      <if test="labelid != null">
+        #{labelid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

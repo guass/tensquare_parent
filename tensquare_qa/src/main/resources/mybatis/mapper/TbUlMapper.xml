@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tensquare.qa.dao.TbUlMapper">
+  <resultMap id="BaseResultMap" type="com.tensquare.qa.pojo.TbUlKey">
+    <id column="uid" jdbcType="VARCHAR" property="uid" />
+    <id column="lid" jdbcType="VARCHAR" property="lid" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="com.tensquare.qa.pojo.TbUlKey">
+    delete from tb_ul
+    where uid = #{uid,jdbcType=VARCHAR}
+      and lid = #{lid,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insert" parameterType="com.tensquare.qa.pojo.TbUlKey">
+    insert into tb_ul (uid, lid)
+    values (#{uid,jdbcType=VARCHAR}, #{lid,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.tensquare.qa.pojo.TbUlKey">
+    insert into tb_ul
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="lid != null">
+        lid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        #{uid,jdbcType=VARCHAR},
+      </if>
+      <if test="lid != null">
+        #{lid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
