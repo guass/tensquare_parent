@@ -27,4 +27,8 @@ public interface TbProblemMapper {
     int updateByPrimaryKey(TbProblem record);
 
     List<TbProblem> getProblemListByLableId(String lableId);
+
+    List<TbProblem> getHotProblemListByLableId(String lableId);
+
+    List<TbProblem> getWaitProblemListByLableId(String lableId);
 }
