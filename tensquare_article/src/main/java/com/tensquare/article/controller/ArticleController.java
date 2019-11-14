@@ -5,6 +5,8 @@ import entity.Result;
 import entity.StatusCode;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author: guass
  * @description: 设备管理类
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/article")
 public class ArticleController {
 
+    @Resource
     private ArticleService articleService;
 
     @PostMapping("/examine/{id}")
