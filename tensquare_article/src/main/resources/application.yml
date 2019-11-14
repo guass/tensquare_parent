@@ -8,7 +8,7 @@ spring:
     #    driver-class-name: com.mysql.jdbc.Driver
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://192.168.117.131:3306/tensquare_article?charactorEncoding=utf-8
+    url: jdbc:mysql://47.100.37.192:3306/tensquare_article?charactorEncoding=utf-8
     username: root
     password: 123456
 
