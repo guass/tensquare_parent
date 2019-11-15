@@ -31,6 +31,10 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 
+  redis:
+    host: 47.100.37.192
+
+
 logging:
   config: classpath:logback-spring.xml
   level:

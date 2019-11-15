@@ -20,6 +20,13 @@ public class ArticleController {
     @Resource
     private ArticleService articleService;
 
+    @GetMapping("/get-article/{id}")
+    public Result getArticleById(@PathVariable("id") String id){
+        articleService.getArticleById(id);
+        Result result = new Result(true, StatusCode.OK,"审核成功",null);
+        return result;
+    }
+
     @PostMapping("/examine/{id}")
     public Result articleExamine(@PathVariable("id") String id){
         articleService.articleExamine(id);

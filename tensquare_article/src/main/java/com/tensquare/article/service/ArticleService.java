@@ -2,7 +2,10 @@ package com.tensquare.article.service;
 
 import com.tensquare.article.dao.TbArticleMapper;
 import com.tensquare.article.pojo.TbArticle;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author: guass
@@ -12,7 +15,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArticleService {
 
+    @Resource
     private TbArticleMapper tbArticleMapper;
+
+    @Resource
+    private RedisTemplate redisTemplate;
+
+    public TbArticle getArticleById(String id){
+        TbArticle tbArticle = (TbArticle) redisTemplate.opsForValue().get("article_"+ id);
+        if (tbArticle == null) {
+            tbArticle = tbArticleMapper.selectByPrimaryKey(id);
+            redisTemplate.opsForValue().set("article_"+ id,tbArticle);
+        }
+        return tbArticle;
+    }
 
     /**
      * 审核
