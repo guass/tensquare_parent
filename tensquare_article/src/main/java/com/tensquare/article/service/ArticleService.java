@@ -21,6 +21,39 @@ public class ArticleService {
     @Resource
     private RedisTemplate redisTemplate;
 
+    public void delete(String id){
+        tbArticleMapper.deleteByPrimaryKey(id);
+        redisTemplate.delete("article_" + id);
+    }
+
+
+    /**
+     * update
+     * @param newArticle
+     */
+    public void update(TbArticle newArticle){
+        TbArticle tbArticle = tbArticleMapper.selectByPrimaryKey(newArticle.getId());
+        if (tbArticle != null) {
+            tbArticle.setThumbup(newArticle.getThumbup());
+            tbArticle.setState(newArticle.getState());
+            tbArticle.setChannelid(newArticle.getChannelid());
+            tbArticle.setColumnid(newArticle.getColumnid());
+            tbArticle.setComment(newArticle.getComment());
+            tbArticle.setContent(newArticle.getContent());
+            tbArticle.setImage(newArticle.getImage());
+            tbArticle.setUrl(newArticle.getUrl());
+
+            tbArticleMapper.updateByPrimaryKeySelective(tbArticle);
+            redisTemplate.delete("article_" + tbArticle.getId());
+        }
+
+    }
+
+    /**
+     * 获取
+     * @param id
+     * @return
+     */
     public TbArticle getArticleById(String id){
         TbArticle tbArticle = (TbArticle) redisTemplate.opsForValue().get("article_"+ id);
         if (tbArticle == null) {

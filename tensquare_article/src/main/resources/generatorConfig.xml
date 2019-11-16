@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
     <!-- !!!! Driver Class Path !!!! -->
-    <classPathEntry location="/Users/guassguass/tools/mysql-connector-java-5.1.30.jar"/>
+    <classPathEntry location="D:\MyDownloads\mysql-connector-java-5.1.21.jar"/>
 
     <context id="context" targetRuntime="MyBatis3">
         <commentGenerator>
@@ -14,7 +14,7 @@
         </commentGenerator>
 
         <!-- !!!! Database Configurations !!!! -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.117.131:3306/tensquare_article?characterEncoding=utf-8" userId="root" password="123456"/>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://47.100.37.192:3306/tensquare_article?characterEncoding=utf-8" userId="root" password="123456"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -37,6 +37,6 @@
         </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
-        <table tableName="tb_article" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"  enableUpdateByExample="false"/>
+        <table tableName="tb_column" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"  enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>

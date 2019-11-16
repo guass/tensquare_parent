@@ -6,6 +6,7 @@ import entity.StatusCode;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.constraints.NotBlank;
 
 /**
  * @author: guass
@@ -21,7 +22,7 @@ public class ArticleController {
     private ArticleService articleService;
 
     @GetMapping("/get-article/{id}")
-    public Result getArticleById(@PathVariable("id") String id){
+    public Result getArticleById(@PathVariable("id")  @NotBlank String id){
         articleService.getArticleById(id);
         Result result = new Result(true, StatusCode.OK,"审核成功",null);
         return result;
