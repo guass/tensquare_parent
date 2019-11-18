@@ -1,14 +1,14 @@
 server:
-  port: 9005
+  port: 9006
 
 spring:
   application:
-    name: tensquare-article
+    name: tensquare-gathering
   datasource:
     #    driver-class-name: com.mysql.jdbc.Driver
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://47.100.37.192:3306/tensquare_article?charactorEncoding=utf-8
+    url: jdbc:mysql://47.100.37.192:3306/tensquare_gathering?charactorEncoding=utf-8
     username: root
     password: 123456
 
@@ -30,10 +30,6 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
-
-  redis:
-    host: 47.100.37.192
-
 
 logging:
   config: classpath:logback-spring.xml

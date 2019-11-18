@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!-- 引入spring boot默认日志配置 -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <property name="LOG_HOME" value="./logs" />
+<!--    <property name="LOG_HOME" value="/logs" />-->
+    <property name="INFO_MAX_HISTORY" value="30" />
+    <property name="INFO_MAX_FILE_SIZE" value="100" />
+    <property name="ERROR_MAX_HISTORY" value="60" />
+    <property name="ERROR_MAX_FILE_SIZE" value="20" />
+
+    <!-- 控制台输出 -->
+    <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern> %d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %cyan([%-50.50class]) : %boldYellow(%msg) %n</pattern>
+        </layout>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern> %d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %cyan([%-50.50class]) : %boldYellow(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <!--info级别日志文件输出-->
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--只拦截info日志的配置-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <!--匹配规则，如果匹配上（上面level配置）就否认-->
+            <onMatch>DENY</onMatch>
+            <!--如果匹配不上就接收-->
+            <onMismatch>ACCEPT</onMismatch>
+            <!--LevelFilter里的FilterReply中定义三个规则，另外有个NEUTRAL，意思是跳过这个，然后继续后面的-->
+        </filter>
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>${INFO_MAX_FILE_SIZE}MB</MaxFileSize>
+        </triggeringPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level [%-50.50class] : %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <!-- 最常用的滚动策略,每天滚动生成，它根据时间来制定滚动策略.既负责滚动也负责出发滚动 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <fileNamePattern>${LOG_HOME}\log\gathering.info.%d.log</fileNamePattern>
+            <!--<fileNamePattern>E:\workSpace\springbootTest\seller\log\info.%d.log</fileNamePattern>-->
+            <!--日志文件保留天数-->
+            <MaxHistory>${INFO_MAX_HISTORY}</MaxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!--error级别日志文件输出-->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 过滤器，只记录WARN级别的日志 -->
+        <!--<filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%-50.50class] : %msg%n</pattern>
+        </encoder>
+
+        <!-- 最常用的滚动策略，它根据时间来制定滚动策略.既负责滚动也负责出发滚动 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志输出位置  可相对、和绝对路径 -->
+            <!--<fileNamePattern>${LOG_HOME}\%d{yyyy-MM-dd}\error-log.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+            <fileNamePattern>${LOG_HOME}\gathering.info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--<fileNamePattern>E:\software\ideaIU-2018.2.4\idea_workspace\logs\info.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+            <!--日志文件保留天数-->
+            <maxHistory>${ERROR_MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>${ERROR_MAX_FILE_SIZE}MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+    <!--myibatis log configure-->
+    <logger name="com.apache.ibatis" level="TRACE"/>
+    <logger name="java.sql.Connection" level="DEBUG"/>
+    <logger name="java.sql.Statement" level="DEBUG"/>
+    <logger name="java.sql.PreparedStatement" level="DEBUG"/>
+    <logger name="dao" level="debug" />
+    <!-- 屏蔽打印列名和行日志 -->
+    <logger name="java.sql.Columns" level="OFF" />
+    <logger name="java.sql.Row" level="OFF" />
+
+    <root level="info">
+        <!--控制台输出-->
+        <appender-ref ref="consoleLog"/>
+        <!--info输出-->
+        <appender-ref ref="fileInfoLog"/>
+        <!--error输出-->
+        <appender-ref ref="fileErrorLog"/>
+    </root>
+</configuration>
