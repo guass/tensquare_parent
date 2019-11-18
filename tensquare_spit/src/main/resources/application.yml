@@ -1,0 +1,26 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: tensquare-spit
+  data:
+    mongodb:
+      database: spitdb
+      host: 121.40.245.36
+      port: 27017
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.tensquare.base.dao: DEBUG
+
+
+#pagehelper分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+
+
