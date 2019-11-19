@@ -1,5 +1,7 @@
 server:
   port: 9007
+  servlet:
+    context-path: /guass
 
 spring:
   application:
@@ -7,8 +9,12 @@ spring:
   data:
     mongodb:
       database: spitdb
-      host: 121.40.245.36
+      host: 47.111.191.26
       port: 27017
+
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
 
 logging:
   config: classpath:logback-spring.xml
