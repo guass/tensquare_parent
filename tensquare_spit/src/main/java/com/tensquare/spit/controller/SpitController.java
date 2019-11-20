@@ -5,6 +5,7 @@ import com.tensquare.spit.service.SpitService;
 import com.tensquare.spit.service.impl.SpitServiceMongoTempImpl;
 import entity.Result;
 import entity.StatusCode;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,6 +19,7 @@ import java.util.List;
 @RestController
 @CrossOrigin
 @RequestMapping("/spit")
+@Slf4j
 public class SpitController {
 
     @Resource(type = SpitServiceMongoTempImpl.class)
@@ -50,6 +52,7 @@ public class SpitController {
 
         List<Spit> all = spitService.findAll();
         Result result = new Result(true, StatusCode.OK, "查找成功222",all);
+        log.info("guass result " + result);
         return result;
     }
 }
