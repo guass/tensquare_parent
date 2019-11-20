@@ -5,17 +5,18 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.util.StringUtils;
 import utils.PageUtils;
 import com.tensquare.spit.pojo.Spit;
 import com.tensquare.spit.service.SpitService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import utils.IdWorker;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -52,9 +53,6 @@ public class SpitServiceMongoTempImpl implements SpitService {
     @Override
     public List<Spit> findAll(){
         List<Spit> all = mongoTemplate.findAll(Spit.class);
-
-        log.info("guass all " + all);
-
         return all;
     }
 
@@ -67,6 +65,21 @@ public class SpitServiceMongoTempImpl implements SpitService {
     @Override
     public void add(Spit spit){
         spit.set_id(idWorker.nextId() +"");
+        spit.setVisits(0);
+        spit.setThumbup(0);
+        spit.setShare(0);
+        spit.setPublishTime(new Date());
+        spit.setState(1 + "");
+        String parentId = spit.getParentId();
+        if (!StringUtils.isEmpty(parentId)) {
+            Query query = new Query();
+            query.addCriteria(Criteria.where("_id").is(parentId));
+
+            Update update = new Update();
+            update.inc("comment",1);
+            mongoTemplate.updateFirst(query,update,"spit");
+        }
+
         mongoTemplate.save(spit);
     }
 
@@ -82,14 +95,6 @@ public class SpitServiceMongoTempImpl implements SpitService {
 
     @Override
     public boolean thumb(String id) {
-//        Spit spit = findById(id);
-//        Integer thumbup = spit.getThumbup();
-//        if (thumbup != null) {
-//            spit.setThumbup(thumbup + 1);
-//        }else {
-//            spit.setThumbup(1);
-//        }
-//        mongoTemplate.save(spit);
 
         String userId = "111";
 
