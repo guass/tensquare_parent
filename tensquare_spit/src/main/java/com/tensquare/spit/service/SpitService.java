@@ -19,5 +19,5 @@ public interface SpitService {
 
     void deleteById(String id);
 
-    void thumb(String id);
+    boolean thumb(String id);
 }

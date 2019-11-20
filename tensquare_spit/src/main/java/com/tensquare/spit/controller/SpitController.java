@@ -68,8 +68,11 @@ public class SpitController {
 
     @PutMapping("/thumb/{id}")
     public Result thumb(@PathVariable String id){
-        spitService.thumb(id);
-        Result result = new Result(true, StatusCode.OK, "点赞成功");
-        return result;
+        if (spitService.thumb(id)) {
+            return new Result(true, StatusCode.OK, "点赞成功");
+        }
+        else {
+            return new Result(false, StatusCode.ERROR, "点赞失败");
+        }
     }
 }

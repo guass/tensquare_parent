@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.data.redis.core.RedisTemplate;
 import utils.PageUtils;
 import com.tensquare.spit.pojo.Spit;
 import com.tensquare.spit.service.SpitService;
@@ -30,6 +31,9 @@ public class SpitServiceMongoTempImpl implements SpitService {
 
     @Resource
     private MongoTemplate mongoTemplate;
+
+    @Resource
+    private RedisTemplate redisTemplate;
 
     @Resource
     private IdWorker idWorker;
@@ -77,7 +81,7 @@ public class SpitServiceMongoTempImpl implements SpitService {
     }
 
     @Override
-    public void thumb(String id) {
+    public boolean thumb(String id) {
 //        Spit spit = findById(id);
 //        Integer thumbup = spit.getThumbup();
 //        if (thumbup != null) {
@@ -87,12 +91,20 @@ public class SpitServiceMongoTempImpl implements SpitService {
 //        }
 //        mongoTemplate.save(spit);
 
+        String userId = "111";
+
+        if (redisTemplate.opsForValue().get("thumb_" + userId) != null) {
+            return false;
+        }
         Query query = new Query();
         query.addCriteria(Criteria.where("_id").is(id));
 
         Update update = new Update();
         update.inc("thumbup",1);
         mongoTemplate.updateFirst(query,update,"spit");
+
+        redisTemplate.opsForValue().set("thumb_" + userId,1);
+        return true;
     }
 
 }

@@ -57,7 +57,7 @@ public class SpitServiceJpaImpl implements SpitService {
     }
 
     @Override
-    public void thumb(String id) {
-
+    public boolean thumb(String id) {
+        return false;
     }
 }

@@ -16,6 +16,9 @@ spring:
     restart:
       enabled: true  #设置开启热部署
 
+  redis:
+    host: 47.111.191.26
+
 logging:
   config: classpath:logback-spring.xml
   level:
