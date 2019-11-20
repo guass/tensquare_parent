@@ -1,11 +1,11 @@
 package com.tensquare.spit.service.impl;
 
+import com.github.pagehelper.PageInfo;
+import utils.PageUtils;
 import com.tensquare.spit.dao.SpitDao;
 import com.tensquare.spit.pojo.Spit;
 import com.tensquare.spit.service.SpitService;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +24,11 @@ public class SpitServiceJpaImpl implements SpitService {
 
     @Autowired
     private SpitDao spitDao;
+
+    @Override
+    public PageInfo<Spit> findByParentId(String id, int page, int size) {
+        return null;
+    }
 
     @Override
     public List<Spit> findAll() {

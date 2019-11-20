@@ -1,5 +1,6 @@
 package com.tensquare.spit.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.tensquare.spit.pojo.Spit;
 import com.tensquare.spit.service.SpitService;
 import com.tensquare.spit.service.impl.SpitServiceMongoTempImpl;
@@ -52,6 +53,15 @@ public class SpitController {
 
         List<Spit> all = spitService.findAll();
         Result result = new Result(true, StatusCode.OK, "查找成功222",all);
+        log.info("guass result " + result);
+        return result;
+    }
+
+    @GetMapping("/find-spit/{parentId}/{page}/{size}")
+    public Result findByParentId(@PathVariable String parentId, @PathVariable int page, @PathVariable int size){
+
+        PageInfo<Spit> byParentId = spitService.findByParentId(parentId, page, size);
+        Result result = new Result(true, StatusCode.OK, "查找成功222",byParentId);
         log.info("guass result " + result);
         return result;
     }

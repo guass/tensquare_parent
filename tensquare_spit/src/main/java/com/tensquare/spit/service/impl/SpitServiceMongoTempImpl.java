@@ -1,11 +1,12 @@
 package com.tensquare.spit.service.impl;
 
-import com.tensquare.spit.dao.SpitDao;
+import com.github.pagehelper.PageInfo;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import utils.PageUtils;
 import com.tensquare.spit.pojo.Spit;
 import com.tensquare.spit.service.SpitService;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
@@ -26,11 +27,22 @@ import java.util.List;
 public class SpitServiceMongoTempImpl implements SpitService {
 
 
-    @Autowired
+    @Resource
     private MongoTemplate mongoTemplate;
 
     @Resource
     private IdWorker idWorker;
+
+    @Override
+    public PageInfo<Spit> findByParentId(String id, int page, int size) {
+
+        Query query = new Query();
+        query.addCriteria(Criteria.where("parentId").is(id));
+
+        List<Spit> spitList = mongoTemplate.find(query, Spit.class, "spit");
+        PageInfo<Spit> pageInfo = PageUtils.reverToPage(spitList, page, size);
+        return pageInfo;
+    }
 
     @Override
     public List<Spit> findAll(){
