@@ -18,4 +18,6 @@ public interface SpitService {
     void update(Spit spit);
 
     void deleteById(String id);
+
+    void thumb(String id);
 }

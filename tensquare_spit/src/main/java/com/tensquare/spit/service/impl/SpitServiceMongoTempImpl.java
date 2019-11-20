@@ -3,6 +3,7 @@ package com.tensquare.spit.service.impl;
 import com.github.pagehelper.PageInfo;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import utils.PageUtils;
 import com.tensquare.spit.pojo.Spit;
 import com.tensquare.spit.service.SpitService;
@@ -74,4 +75,24 @@ public class SpitServiceMongoTempImpl implements SpitService {
     public void deleteById(String id){
         mongoTemplate.remove(id);
     }
+
+    @Override
+    public void thumb(String id) {
+//        Spit spit = findById(id);
+//        Integer thumbup = spit.getThumbup();
+//        if (thumbup != null) {
+//            spit.setThumbup(thumbup + 1);
+//        }else {
+//            spit.setThumbup(1);
+//        }
+//        mongoTemplate.save(spit);
+
+        Query query = new Query();
+        query.addCriteria(Criteria.where("_id").is(id));
+
+        Update update = new Update();
+        update.inc("thumbup",1);
+        mongoTemplate.updateFirst(query,update,"spit");
+    }
+
 }

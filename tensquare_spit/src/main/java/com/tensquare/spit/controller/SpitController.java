@@ -65,4 +65,11 @@ public class SpitController {
         log.info("guass result " + result);
         return result;
     }
+
+    @PutMapping("/thumb/{id}")
+    public Result thumb(@PathVariable String id){
+        spitService.thumb(id);
+        Result result = new Result(true, StatusCode.OK, "点赞成功");
+        return result;
+    }
 }

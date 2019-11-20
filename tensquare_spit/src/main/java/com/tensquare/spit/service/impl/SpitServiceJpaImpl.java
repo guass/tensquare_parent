@@ -55,4 +55,9 @@ public class SpitServiceJpaImpl implements SpitService {
     public void deleteById(String id) {
         spitDao.deleteById(id);
     }
+
+    @Override
+    public void thumb(String id) {
+
+    }
 }
