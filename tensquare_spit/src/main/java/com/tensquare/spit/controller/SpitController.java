@@ -2,11 +2,12 @@ package com.tensquare.spit.controller;
 
 import com.tensquare.spit.pojo.Spit;
 import com.tensquare.spit.service.SpitService;
+import com.tensquare.spit.service.impl.SpitServiceMongoTempImpl;
 import entity.Result;
 import entity.StatusCode;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ import java.util.List;
 @RequestMapping("/spit")
 public class SpitController {
 
-    @Autowired
+    @Resource(type = SpitServiceMongoTempImpl.class)
     private SpitService spitService;
 
     @PostMapping("/add-spit")
