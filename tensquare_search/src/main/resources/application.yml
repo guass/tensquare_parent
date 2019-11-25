@@ -1,0 +1,31 @@
+server:
+  port: 9008
+  servlet:
+    context-path: /guass
+
+spring:
+  application:
+    name: tensquare-search
+#
+  data:
+    elasticsearch:
+      cluster-nodes: 47.111.191.26:9300
+
+
+
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.tensquare.base.dao: DEBUG
+
+
+#pagehelper分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+
+
