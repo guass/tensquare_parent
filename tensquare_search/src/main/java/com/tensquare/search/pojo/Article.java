@@ -3,6 +3,7 @@ package com.tensquare.search.pojo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * @author: guass
@@ -15,10 +16,10 @@ public class Article {
     @Id
     private String id;
 
-    @Field(index = true,analyzer="ik_max_word",searchAnalyzer="ik_max_word")
+//    @Field(index = true,type = FieldType.Text, analyzer="ik_max_word",searchAnalyzer="ik_max_word")
     private String title;
 
-    @Field(index = true,analyzer="ik_max_word",searchAnalyzer="ik_max_word")
+//    @Field(index = true,type = FieldType.Text,analyzer="ik_max_word",searchAnalyzer="ik_max_word")
     private String content;
 
     private String state;
