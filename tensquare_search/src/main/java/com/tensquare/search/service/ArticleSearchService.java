@@ -2,6 +2,9 @@ package com.tensquare.search.service;
 
 import com.tensquare.search.dao.ArticleSearchDao;
 import com.tensquare.search.pojo.Article;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,4 +24,8 @@ public class ArticleSearchService {
         articleSearchDao.save(article);
     }
 
+    public Page<Article> findByKey(String key, Integer page, Integer size) {
+        Pageable pageable = PageRequest.of(page - 1, size);
+        return articleSearchDao.findByTitleOrContentLike(key,key,pageable);
+    }
 }
