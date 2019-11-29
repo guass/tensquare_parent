@@ -1,0 +1,31 @@
+server:
+  port: 9009
+  servlet:
+    context-path: /guass
+
+spring:
+  application:
+    name: guass-mq
+
+  rabbitmq:
+    host: 47.111.191.26
+    username: root
+    password: root
+    virtual-host: my_vhost
+
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.tensquare.base.dao: DEBUG
+
+
+#pagehelper分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+
+
