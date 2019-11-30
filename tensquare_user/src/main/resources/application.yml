@@ -1,14 +1,14 @@
 server:
-  port: 9004
+  port: 9010
 
 spring:
   application:
-    name: tensquare-qa
+    name: tensquare-user
   datasource:
     #    driver-class-name: com.mysql.jdbc.Driver
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://47.111.191.26:3306/tensquare_qa?charactorEncoding=utf-8
+    url: jdbc:mysql://47.111.191.26:3306/tensquare_user?charactorEncoding=utf-8
     username: root
     password: 123456
 
@@ -30,6 +30,16 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+
+  redis:
+    host: 47.111.191.26
+
+  rabbitmq:
+    host: 47.111.191.26
+    username: root
+    password: root
+    virtual-host: my_vhost
 
 logging:
   config: classpath:logback-spring.xml
