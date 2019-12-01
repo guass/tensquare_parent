@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -30,8 +32,28 @@ public class UserService {
 
         redisTemplate.opsForValue().set("checkCode_" + randomNumeric,randomNumeric,4, TimeUnit.MINUTES);
 
+        Map<String,String> map = new HashMap<>();
+        map.put("phone",phone);
+        map.put("checkCode",randomNumeric);
         //send mq
-        rabbitTemplate.convertAndSend("guass_topic","guass3.abc","222222");
+        rabbitTemplate.convertAndSend("guass_topic","guass3.abc",map);
 
+    }
+
+    /**
+     *
+     * @param checkCode
+     */
+    public int regist(String checkCode) {
+
+        String code_save = (String) redisTemplate.opsForValue().get("checkCode_" + checkCode);
+
+        if (code_save != null) {
+
+        }else {
+
+        }
+
+        return 0;
     }
 }

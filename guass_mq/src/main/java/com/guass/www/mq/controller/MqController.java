@@ -1,7 +1,9 @@
 package com.guass.www.mq.controller;
 
+import com.oracle.tools.packager.Log;
 import entity.Result;
 import entity.StatusCode;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 @RequestMapping("/mq")
+@Slf4j
 public class MqController {
 
     @Autowired

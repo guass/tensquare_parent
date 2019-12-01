@@ -27,4 +27,12 @@ public class UserController {
         return result;
     }
 
+
+    @PostMapping("/regist/{checkCode}")
+    public Result regist(@PathVariable String checkCode){
+        userService.regist(checkCode);
+        Result result = new Result(true, StatusCode.OK, "send msg ok");
+        return result;
+    }
+
 }
