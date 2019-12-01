@@ -1,5 +1,6 @@
 package com.tensquare.user.controller;
 
+import com.tensquare.user.pojo.TbUser;
 import com.tensquare.user.service.UserService;
 import entity.Result;
 import entity.StatusCode;
@@ -29,8 +30,8 @@ public class UserController {
 
 
     @PostMapping("/regist/{checkCode}")
-    public Result regist(@PathVariable String checkCode){
-        userService.regist(checkCode);
+    public Result regist(@PathVariable String checkCode, @RequestBody TbUser user){
+        userService.regist(checkCode,user);
         Result result = new Result(true, StatusCode.OK, "send msg ok");
         return result;
     }
