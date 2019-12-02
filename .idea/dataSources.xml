@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="tensquare_base" uuid="9c2d3401-587a-4658-b636-287d8f02a99b">
-      <driver-ref>mysql.8</driver-ref>
+    <data-source source="LOCAL" name="guass_mongo" uuid="ce07c551-4f05-476e-a946-3fd24fcd7477">
+      <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.23.153:3307/tensquare_base</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://47.111.191.26:27017/spitdb</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="recruit" uuid="2ede2079-fc4c-4adc-9dc9-7403a91aba39">
+    <data-source source="LOCAL" name="tensquare_user" uuid="b965a09a-1092-4180-b816-c5e0490b7075">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.23.153:3307/tensquare_recruit</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
+      <jdbc-url>jdbc:mysql://47.111.191.26:3306/tensquare_user</jdbc-url>
     </data-source>
   </component>
 </project>
