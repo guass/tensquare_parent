@@ -15,6 +15,8 @@ public interface TbUserMapper {
 
     TbUser selectByPrimaryKey(String id);
 
+    TbUser selectByPhone(String phone);
+
 
     int updateByPrimaryKeySelective(TbUser record);
 

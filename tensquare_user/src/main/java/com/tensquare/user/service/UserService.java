@@ -1,11 +1,13 @@
 package com.tensquare.user.service;
 
 import com.tensquare.user.dao.TbUserMapper;
+import com.tensquare.user.pojo.TbAdmin;
 import com.tensquare.user.pojo.TbUser;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import utils.IdWorker;
 
@@ -35,6 +37,14 @@ public class UserService {
     @Autowired
     private IdWorker idWorker;
 
+    @Autowired
+    BCryptPasswordEncoder encoder;
+
+
+    /**
+     * 发送短信
+     * @param phone
+     */
     public void sendMsg(String phone) {
 
         String randomNumeric = RandomStringUtils.randomNumeric(6);
@@ -51,7 +61,7 @@ public class UserService {
     }
 
     /**
-     *
+     *注册
      * @param checkCode
      */
     public int regist(String checkCode, TbUser user) {
@@ -61,6 +71,8 @@ public class UserService {
 
             if (code_save != null) {
                 user.setId(idWorker.nextId() +"");
+                String newPassword = encoder.encode(user.getPassword());
+                user.setPassword(newPassword);
                 //todo add user
                 tbUserMapper.insertSelective(user);
             }else {
@@ -73,5 +85,14 @@ public class UserService {
         }
 
         return 0;
+    }
+
+    public TbUser findByPhoneAndPassword(String phone, String password) {
+        TbUser user = tbUserMapper.selectByPhone(phone);
+        boolean matches = encoder.matches(password, user.getPassword());
+        if (matches) {
+            return user;
+        }
+        return null;
     }
 }
