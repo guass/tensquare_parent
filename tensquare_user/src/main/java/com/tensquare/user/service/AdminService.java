@@ -35,10 +35,15 @@ public class AdminService {
     }
 
     public TbAdmin findByLoginNameAndPassword(String loginName, String password){
-        TbAdmin admin = tbAdminMapper.selectByNameAndPassword(loginName);
-        boolean matches = encoder.matches(password, admin.getPassword());
-        if (matches) {
-            return admin;
+        try {
+            TbAdmin admin = tbAdminMapper.selectByNameAndPassword(loginName);
+            boolean matches = encoder.matches(password, admin.getPassword());
+            if (matches) {
+                return admin;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
         return null;
     }

@@ -1,5 +1,6 @@
 package com.tensquare.user.controller;
 
+import utils.JwtUtil;
 import com.tensquare.user.pojo.TbAdmin;
 import com.tensquare.user.service.AdminService;
 import entity.Result;
@@ -9,6 +10,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -25,6 +28,9 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    @Resource
+    private JwtUtil jwtUtil;
+
 
     @ApiOperation("admin login接口")
     @PostMapping("/login")
@@ -34,7 +40,11 @@ public class AdminController {
                 loginMap.get("password"));
 
         if (admin != null) {
-            return new Result(true, StatusCode.OK,"login ok");
+            String token = jwtUtil.createJWT(admin.getId(), admin.getLoginname(), "admin");
+            Map<String,String> map = new HashMap<>();
+            map.put("token",token);
+            map.put("name",admin.getLoginname());
+            return new Result(true, StatusCode.OK,"login ok",map);
         }
         return new Result(true, StatusCode.ERROR,"login err! user not exist");
     }

@@ -42,12 +42,21 @@ spring:
     username: root
     password: root
     virtual-host: my_vhost
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri:
 
 logging:
   config: classpath:logback-spring.xml
   level:
     com.tensquare.base.dao: DEBUG
 
+jwt:
+  config:
+    key: guass
+    ttl: 600000
 
 #pagehelper分页插件配置
 pagehelper:
