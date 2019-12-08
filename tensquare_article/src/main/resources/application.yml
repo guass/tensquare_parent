@@ -1,6 +1,7 @@
 server:
   port: 9005
 
+
 spring:
   application:
     name: tensquare-article
@@ -52,3 +53,12 @@ pagehelper:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/eureka/
+
+  instance:
+  prefer‐ip‐address: true

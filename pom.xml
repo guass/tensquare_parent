@@ -18,6 +18,7 @@
         <module>tensquare_search</module>
         <module>guass_mq</module>
         <module>tensquare_user</module>
+        <module>tensquare_eureka</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -62,12 +63,32 @@
             <version>1.2.29</version>
         </dependency>
 
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+<!--            <version>2.1.4.RELEASE</version>-->
         </dependency>
 
     </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+
 
     <repositories>
         <repository>
