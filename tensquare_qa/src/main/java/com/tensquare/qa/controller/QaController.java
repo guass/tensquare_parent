@@ -1,18 +1,32 @@
 package com.tensquare.qa.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.tensquare.qa.feign.BaseClient;
 import com.tensquare.qa.pojo.TbProblem;
 import com.tensquare.qa.service.ProblemService;
 import entity.Result;
 import entity.StatusCode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 @RestController
 @CrossOrigin
 @RequestMapping("/qa")
 public class QaController {
 
+    @Resource
     private ProblemService problemService;
+
+
+    @Autowired
+    BaseClient baseClient;
+
+    @GetMapping("/lable/{lableId}")
+    Result findById(@PathVariable("lableId") String lableId){
+        return baseClient.findById(lableId);
+    }
 
     @GetMapping("/get-new-problem-list/{lable}/{page}/{size}")
     public Result getNewProblemList(@PathVariable("lable")String label, @PathVariable("page") String page,
