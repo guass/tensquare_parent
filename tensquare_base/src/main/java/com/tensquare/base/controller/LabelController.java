@@ -6,6 +6,8 @@ import com.tensquare.base.pojo.TbLabel;
 import com.tensquare.base.service.LabelService;
 import entity.Result;
 import entity.StatusCode;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -14,10 +16,14 @@ import java.util.List;
 @RestController
 @CrossOrigin
 @RequestMapping("/lable")
+@Slf4j
 public class LabelController {
 
     @Resource
     private LabelService labelService;
+
+    @Value("${server.port}")
+    private String port;
 
     @GetMapping
     public Result findAll(){
@@ -29,7 +35,8 @@ public class LabelController {
     @GetMapping("/{lableId}")
     public Result findById(@PathVariable String lableId){
 
-        Result result = new Result(true, StatusCode.OK, "查找成功",labelService.findById(lableId));
+        log.info("qa " + port);
+        Result result = new Result(true, StatusCode.OK, "查找成功 " + port,labelService.findById(lableId));
 
         return result;
     }
