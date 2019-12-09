@@ -3,6 +3,7 @@ package com.tensquare.user;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -17,6 +18,7 @@ import utils.JwtUtil;
 @SpringBootApplication
 @MapperScan(value = "com.tensquare.user.dao")
 @EnableEurekaClient
+@ServletComponentScan("com.tensquare.user.listener")
 public class UserApplication {
 
     public static void main(String[] args) {
