@@ -1,7 +1,7 @@
 server:
   port: 9008
   servlet:
-    context-path: /guass
+    context-path: /search
 
 spring:
   application:
