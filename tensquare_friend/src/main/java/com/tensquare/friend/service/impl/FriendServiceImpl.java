@@ -4,6 +4,7 @@ import com.tensquare.friend.dao.TbFriendMapper;
 import com.tensquare.friend.dao.TbNoFriendMapper;
 import com.tensquare.friend.pojo.TbFriend;
 import com.tensquare.friend.pojo.TbFriendKey;
+import com.tensquare.friend.pojo.TbNoFriendKey;
 import com.tensquare.friend.service.FriendService;
 import org.springframework.stereotype.Service;
 
@@ -55,6 +56,14 @@ public class FriendServiceImpl implements FriendService {
 
     @Override
     public int addNoFriend(String userId, String friendId) {
-        return 0;
+        TbNoFriendKey tbNoFriendKey = tbNoFriendMapper.selectInfo(userId, friendId);
+        if (tbNoFriendKey == null) {
+            tbNoFriendKey.setUserId(userId);
+            tbNoFriendKey.setFriendId(friendId);
+            tbNoFriendMapper.insertSelective(tbNoFriendKey);
+            return 0;
+        }
+
+        return -1;
     }
 }

@@ -1,39 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tensquare.friend.dao.TbNoFriendMapper">
-  <resultMap id="BaseResultMap" type="com.tensquare.friend.pojo.TbNoFriendKey">
-    <id column="user_id" jdbcType="VARCHAR" property="userId" />
-    <id column="friend_id" jdbcType="VARCHAR" property="friendId" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.tensquare.friend.pojo.TbNoFriendKey">
+        <id column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <id column="friend_id" jdbcType="VARCHAR" property="friendId"/>
+    </resultMap>
 
-  <delete id="deleteByPrimaryKey" parameterType="com.tensquare.friend.pojo.TbNoFriendKey">
-    delete from tb_no_friend
-    where user_id = #{userId,jdbcType=VARCHAR}
-      and friend_id = #{friendId,jdbcType=VARCHAR}
-  </delete>
+    <delete id="deleteByPrimaryKey" parameterType="com.tensquare.friend.pojo.TbNoFriendKey">
+        delete
+        from tb_no_friend
+        where user_id = #{userId,jdbcType=VARCHAR}
+          and friend_id = #{friendId,jdbcType=VARCHAR}
+    </delete>
 
-  <insert id="insert" parameterType="com.tensquare.friend.pojo.TbNoFriendKey">
-    insert into tb_no_friend (user_id, friend_id)
-    values (#{userId,jdbcType=VARCHAR}, #{friendId,jdbcType=VARCHAR})
-  </insert>
+    <select id="selectInfo" resultType="com.tensquare.friend.pojo.TbNoFriendKey">
+        select user_id   as userId,
+               friend_id as friendId
+        from tb_no_friend
+        where user_id = #{userId,jdbcType=VARCHAR}
+          and friend_id = #{friendId,jdbcType=VARCHAR}
+    </select>
 
-  <insert id="insertSelective" parameterType="com.tensquare.friend.pojo.TbNoFriendKey">
-    insert into tb_no_friend
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        user_id,
-      </if>
-      <if test="friendId != null">
-        friend_id,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        #{userId,jdbcType=VARCHAR},
-      </if>
-      <if test="friendId != null">
-        #{friendId,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
+    <insert id="insert" parameterType="com.tensquare.friend.pojo.TbNoFriendKey">
+        insert into tb_no_friend (user_id, friend_id)
+        values (#{userId,jdbcType=VARCHAR}, #{friendId,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.tensquare.friend.pojo.TbNoFriendKey">
+        insert into tb_no_friend
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="friendId != null">
+                friend_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="friendId != null">
+                #{friendId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
 </mapper>
