@@ -21,15 +21,6 @@ public class FriendController {
     @Resource
     private FriendService friendService;
 
-    @Resource
-    private UserClient userClient;
-
-    @PutMapping("/update/fans/follow/{fansId}/{followId}/{res}")
-    Result updateFansAndFollow(@PathVariable("fansId") String fansId, @PathVariable("followId") String followId, @PathVariable("res") Integer res){
-        userClient.updateFansAndFollow(fansId,followId,res);
-        Result result = new Result(true, StatusCode.OK, "update ok");
-        return result;
-    }
 
     @PostMapping("/add/friend/{userId}/{friendId}")
     public Result addFriend(@PathVariable("userId") String userId, @PathVariable("friendId") String friendId){

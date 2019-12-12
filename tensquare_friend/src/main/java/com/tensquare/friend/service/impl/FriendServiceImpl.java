@@ -2,6 +2,7 @@ package com.tensquare.friend.service.impl;
 
 import com.tensquare.friend.dao.TbFriendMapper;
 import com.tensquare.friend.dao.TbNoFriendMapper;
+import com.tensquare.friend.feign.UserClient;
 import com.tensquare.friend.pojo.TbFriend;
 import com.tensquare.friend.pojo.TbFriendKey;
 import com.tensquare.friend.pojo.TbNoFriendKey;
@@ -23,6 +24,9 @@ public class FriendServiceImpl implements FriendService {
 
     @Resource
     private TbNoFriendMapper tbNoFriendMapper;
+
+    @Resource
+    private UserClient userClient;
 
     @Override
     public int addFriend(String userId, String friendId) {
@@ -46,6 +50,7 @@ public class FriendServiceImpl implements FriendService {
             }else {
                 tbFriend.setIslike(1 +"");
             }
+            userClient.updateFansAndFollow(userId,friendId,1);
             tbFriendMapper.insertSelective(tbFriend);
         }else {
             return -1;
@@ -61,6 +66,7 @@ public class FriendServiceImpl implements FriendService {
             tbNoFriendKey.setUserId(userId);
             tbNoFriendKey.setFriendId(friendId);
             tbNoFriendMapper.insertSelective(tbNoFriendKey);
+            userClient.updateFansAndFollow(userId,friendId,-1);
             return 0;
         }
 
