@@ -40,6 +40,21 @@ public class UserService {
     @Autowired
     BCryptPasswordEncoder encoder;
 
+    public int updateFansAndFollow(String fanId, String followId,int res){
+        TbUser fan = tbUserMapper.selectByPrimaryKey(fanId);
+        if (fan != null) {
+            fan.setFanscount(Math.max(fan.getFanscount() + res,0));
+            tbUserMapper.updateByPrimaryKeySelective(fan);
+        }
+        TbUser follow = tbUserMapper.selectByPrimaryKey(followId);
+        if (follow != null) {
+            int rr = follow.getFollowcount() + res;
+            follow.setFollowcount(Math.max(rr,0));
+            tbUserMapper.updateByPrimaryKeySelective(follow);
+        }
+        return 0;
+    }
+
 
     /**
      * 发送短信

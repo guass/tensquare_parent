@@ -26,9 +26,18 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @ApiOperation("update fans和follow数目")
+    @PutMapping("/update/fans/follow/{fansId}/{followId}/{res}")
+    public Result updateFansAndFollow(@PathVariable("fansId") String fansId,
+                                      @PathVariable("followId") String followId,@PathVariable("res") Integer res){
+        userService.updateFansAndFollow(fansId,followId,res);
+        Result result = new Result(true, StatusCode.OK, "update ok");
+        return result;
+    }
+
     @ApiOperation("发送短信")
     @PostMapping("/sendMsg/{phone}")
-    public Result sendSms(@PathVariable String phone){
+    public Result sendSms(@PathVariable("phone") String phone){
 
         userService.sendMsg(phone);
         Result result = new Result(true, StatusCode.OK, "send msg ok");
