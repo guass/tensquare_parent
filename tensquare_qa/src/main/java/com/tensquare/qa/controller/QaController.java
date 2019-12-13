@@ -20,7 +20,7 @@ public class QaController {
     private ProblemService problemService;
 
 
-    @Autowired
+    @Resource
     BaseClient baseClient;
 
     @GetMapping("/lable/{lableId}")

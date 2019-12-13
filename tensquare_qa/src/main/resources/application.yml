@@ -12,6 +12,7 @@ eureka:
   prefer‐ip‐address: true
 
 
+
 spring:
   application:
     name: tensquare-qa
@@ -59,3 +60,7 @@ pagehelper:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+feign:
+  hystrix:
+    enabled: true
