@@ -1,9 +1,9 @@
 server:
-  port: 9998
+  port: 9997
 
 spring:
   application:
-    name: tensquare-manager-zuul
+    name: tensquare-web-zuul
 
 eureka:
   client:
