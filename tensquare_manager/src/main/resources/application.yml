@@ -1,0 +1,21 @@
+server:
+  port: 9998
+
+spring:
+  application:
+    name: tensquare-manager-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/eureka/
+
+  instance:
+  prefer‐ip‐address: true
+
+
+zuul:
+  routes:
+    tensquare-base:
+      path: /base/**
+      serviceId: tensquare-base
