@@ -5,7 +5,9 @@ import okhttp3.Response;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,13 +19,9 @@ public class Test {
 
     public static void main(String[] args) {
 
-        String ss = "9999999999";
+        List<String> list = Arrays.asList("111","222","333","111","222");
 
-        if(ss.length() > 9){
-            throw new RuntimeException();
-        }
-
-        System.out.println(Integer.MAX_VALUE);
+        list.stream().distinct().forEach(System.out::println);
 ;    }
 
 

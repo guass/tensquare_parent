@@ -75,3 +75,15 @@ pagehelper:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+
+#fastdfs 配置
+fdfs:
+  so-timeout: 1500
+  connect-timeout: 600
+  thumb-image:
+    width: 150
+    height: 150
+  tracker-list:
+    - 47.111.191.26:22122

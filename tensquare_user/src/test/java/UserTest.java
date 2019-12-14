@@ -1,5 +1,6 @@
 import com.alibaba.fastjson.JSON;
 import com.tensquare.user.UserApplication;
+import com.tensquare.user.fastdfs.DRFdfsUpAndDowServiceImpl;
 import com.tensquare.user.pojo.TbAdmin;
 import com.tensquare.user.service.AdminService;
 import org.junit.Test;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.io.File;
 
 /**
  * @author: guass
@@ -21,6 +23,9 @@ public class UserTest {
     @Resource
     AdminService adminService;
 
+    @Resource
+    DRFdfsUpAndDowServiceImpl drFdfsUpAndDowService;
+
     @Test
     public void test(){
         TbAdmin admin = new TbAdmin();
@@ -29,5 +34,15 @@ public class UserTest {
         admin.setState("1");
 
         adminService.addAdminUser(admin);
+    }
+
+    @Test
+    public void test2(){
+
+        File file = new File("D:\\1.jpg");
+
+        String s = drFdfsUpAndDowService.uploadFile2(file);
+        System.out.println("ss " + s);
+
     }
 }

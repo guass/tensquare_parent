@@ -92,6 +92,12 @@
             <artifactId>okhttp</artifactId>
             <version>3.11.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>1.26.2</version>
+        </dependency>
     </dependencies>
 
     <build>
