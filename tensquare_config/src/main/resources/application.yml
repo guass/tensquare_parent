@@ -1,0 +1,22 @@
+server:
+  port: 9900
+
+spring:
+  application:
+    name: tensquare-config
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/guass/springcloud_conifg.git
+          username: guass
+          password: 1qaz%TGM
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/eureka/
+
