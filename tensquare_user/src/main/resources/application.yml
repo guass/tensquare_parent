@@ -57,7 +57,7 @@ spring:
 logging:
   config: classpath:logback-spring.xml
   level:
-    com.tensquare.base.dao: DEBUG
+    com.tensquare.user.dao: DEBUG
 
 jwt:
   config:

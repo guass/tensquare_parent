@@ -31,3 +31,11 @@ zuul:
     tensquare-spit:
       path: /spit/**
       serviceId: tensquare-spit
+
+
+
+
+jwt:
+  config:
+    key: guass
+    ttl: 600000
