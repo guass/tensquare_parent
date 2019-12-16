@@ -8,6 +8,7 @@ import entity.Result;
 import entity.StatusCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 @CrossOrigin
 @RequestMapping("/lable")
+@RefreshScope //spring cloud bus 起作用
 @Slf4j
 public class LabelController {
 
@@ -24,6 +26,9 @@ public class LabelController {
 
     @Value("${server.port}")
     private String port;
+
+    @Value("${spring.test}")
+    private String test;
 
     @GetMapping
     public Result findAll(){
@@ -36,7 +41,8 @@ public class LabelController {
     public Result findById(@PathVariable String lableId){
 
         log.info("qa " + port);
-        Result result = new Result(true, StatusCode.OK, "查找成功 " + port,labelService.findById(lableId));
+        log.info("test " + test);
+        Result result = new Result(true, StatusCode.OK, "查找成功1 " + port,labelService.findById(lableId));
 
         return result;
     }

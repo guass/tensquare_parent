@@ -12,7 +12,17 @@ spring:
           uri: https://gitee.com/guass/springcloud_conifg.git
           username: guass
           password: 1qaz%TGM
+  rabbitmq:
+    host: 47.111.191.26
+    username: root
+    password: root
+    virtual-host: my_vhost
 
 
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
