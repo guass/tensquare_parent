@@ -3,6 +3,18 @@ server:
   servlet:
     context-path: /spit
 
+feign:
+  hystrix:
+    enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/eureka/
+
+  instance:
+  prefer‐ip‐address: true
+
 spring:
   application:
     name: tensquare-spit

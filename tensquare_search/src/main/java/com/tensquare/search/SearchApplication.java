@@ -2,6 +2,9 @@ package com.tensquare.search;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import utils.IdWorker;
 
@@ -11,6 +14,9 @@ import utils.IdWorker;
  * @data: 2019-05-28 12:20
  **/
 @SpringBootApplication
+@EnableDiscoveryClient
+@EnableEurekaClient
+@EnableFeignClients
 public class SearchApplication {
     public static void main(String[] args) {
 

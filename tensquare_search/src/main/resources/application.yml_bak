@@ -3,6 +3,14 @@ server:
   servlet:
     context-path: /search
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/eureka/
+
+  instance:
+  prefer‐ip‐address: true
+
 spring:
   application:
     name: tensquare-search
@@ -27,6 +35,11 @@ pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: true
+
+
+feign:
+  hystrix:
+    enabled: true
 
 
 

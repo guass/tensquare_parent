@@ -41,8 +41,9 @@ public class UserTest {
 
         File file = new File("D:\\1.jpg");
 
-        String s = drFdfsUpAndDowService.uploadFile2(file);
-        System.out.println("ss " + s);
+       drFdfsUpAndDowService.deleteFile("group1/M00/00/00/rBBafl30jkOAEPkFAABb7Gsu3mk560.jpg");
+
+
 
     }
 }

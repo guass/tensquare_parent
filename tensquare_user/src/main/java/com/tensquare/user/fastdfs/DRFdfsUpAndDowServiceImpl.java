@@ -23,6 +23,10 @@ public class DRFdfsUpAndDowServiceImpl {
 
     private final Logger logger = LoggerFactory.getLogger(DRFdfsUpAndDowServiceImpl.class);
 
+    public void deleteFile(String url){
+        fastDFSClientWrapper.deleteFile(url);
+    }
+
     public String uploadFile2(File file){
         byte[] bytes = new byte[0];
         try {

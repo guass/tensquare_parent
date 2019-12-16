@@ -1,0 +1,48 @@
+2019-12-04 10:34:07 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting UserTest on DESKTOP-BM2NUKP with PID 10832 (started by Administrator in E:\web_demo\tensquare_parent\tensquare_user)
+2019-12-04 10:34:07 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-12-04 10:34:09 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-04 10:34:09 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 10:34:09 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-12-04 10:34:10 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a716422] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 10:34:13 [main] INFO  [ng.web.PropertySourcedRequestMappingHandlerMapping] : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-04 10:34:13 [main] INFO  [curity.servlet.UserDetailsServiceAutoConfiguration] : 
+
+Using generated security password: 85d6f563-eae4-4461-8533-74e054e64cfe
+
+2019-12-04 10:34:13 [main] INFO  [gframework.security.web.DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cc48a17, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e193ef5, org.springframework.security.web.header.HeaderWriterFilter@20256a0b, org.springframework.security.web.authentication.logout.LogoutFilter@6238d5e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21274afe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79ca7bea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@289f15e9, org.springframework.security.web.session.SessionManagementFilter@7ea42c82, org.springframework.security.web.access.ExceptionTranslationFilter@48499739, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f3bd37f]
+2019-12-04 10:34:15 [main] INFO  [pring.web.plugins.DocumentationPluginsBootstrapper] : Context refreshed
+2019-12-04 10:34:15 [main] INFO  [pring.web.plugins.DocumentationPluginsBootstrapper] : Found 1 custom documentation plugin(s)
+2019-12-04 10:34:15 [main] INFO  [ion.spring.web.scanners.ApiListingReferenceScanner] : Scanning for api listing references
+2019-12-04 10:34:15 [main] INFO  [eb.readers.operation.CachingOperationNameGenerator] : Generating unique operation named: loginUsingPOST_1
+2019-12-04 10:34:15 [main] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Attempting to connect to: [47.111.191.26:5672]
+2019-12-04 10:34:16 [main] INFO  [p.rabbit.listener.AbstractMessageListenerContainer] : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: connect
+2019-12-04 10:34:16 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Attempting to connect to: [47.111.191.26:5672]
+2019-12-04 10:34:17 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started UserTest in 11.262 seconds (JVM running for 13.255)
+2019-12-04 10:34:18 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Waiting for workers to finish.
+2019-12-04 10:34:18 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Successfully waited for workers to finish.
+2019-12-04 10:34:18 [Thread-2] INFO  [p.rabbit.listener.AbstractMessageListenerContainer] : Shutdown ignored - container is not active already
+2019-12-04 10:42:19 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting UserTest on DESKTOP-BM2NUKP with PID 10272 (started by Administrator in E:\web_demo\tensquare_parent\tensquare_user)
+2019-12-04 10:42:19 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-12-04 10:42:21 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-04 10:42:21 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 10:42:21 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-12-04 10:42:22 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c4b87ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 10:42:24 [main] INFO  [ng.web.PropertySourcedRequestMappingHandlerMapping] : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-04 10:42:24 [main] INFO  [curity.servlet.UserDetailsServiceAutoConfiguration] : 
+
+Using generated security password: a2cbeb5f-f620-41a3-bbca-fd9136a0f71e
+
+2019-12-04 10:42:24 [main] INFO  [gframework.security.web.DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ecf0ac6, org.springframework.security.web.context.SecurityContextPersistenceFilter@27e199ce, org.springframework.security.web.header.HeaderWriterFilter@34c76167, org.springframework.security.web.authentication.logout.LogoutFilter@70c29356, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7364f68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21274afe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@458031da, org.springframework.security.web.session.SessionManagementFilter@624b3544, org.springframework.security.web.access.ExceptionTranslationFilter@5763a655, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6cdee57]
+2019-12-04 10:42:25 [main] INFO  [pring.web.plugins.DocumentationPluginsBootstrapper] : Context refreshed
+2019-12-04 10:42:25 [main] INFO  [pring.web.plugins.DocumentationPluginsBootstrapper] : Found 1 custom documentation plugin(s)
+2019-12-04 10:42:25 [main] INFO  [ion.spring.web.scanners.ApiListingReferenceScanner] : Scanning for api listing references
+2019-12-04 10:42:26 [main] INFO  [eb.readers.operation.CachingOperationNameGenerator] : Generating unique operation named: loginUsingPOST_1
+2019-12-04 10:42:26 [main] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Attempting to connect to: [47.111.191.26:5672]
+2019-12-04 10:42:27 [main] INFO  [p.rabbit.listener.AbstractMessageListenerContainer] : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: connect
+2019-12-04 10:42:27 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Attempting to connect to: [47.111.191.26:5672]
+2019-12-04 10:42:28 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started UserTest in 9.806 seconds (JVM running for 11.112)
+2019-12-04 10:42:28 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-12-04 10:42:29 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Waiting for workers to finish.
+2019-12-04 10:42:29 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Successfully waited for workers to finish.
+2019-12-04 10:42:29 [Thread-2] INFO  [p.rabbit.listener.AbstractMessageListenerContainer] : Shutdown ignored - container is not active already
+2019-12-04 10:42:29 [Thread-2] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed

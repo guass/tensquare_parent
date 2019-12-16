@@ -23,6 +23,10 @@ public class FastDFSClientWrapper {
     @Autowired
     private FastFileStorageClient fastFileStorageClient;
 
+    public void deleteFile(String url){
+        fastFileStorageClient.deleteFile(url);
+    }
+
     /**
      * 文件上传
      * 最后返回fastDFS中的文件名称;group1/M00/01/04/CgMKrVvS0geAQ0pzAACAAJxmBeM793.doc

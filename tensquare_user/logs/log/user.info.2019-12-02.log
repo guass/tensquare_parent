@@ -1,0 +1,40 @@
+2019-12-02 15:17:33 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting UserTest on DESKTOP-BM2NUKP with PID 4852 (started by Administrator in E:\web_demo\tensquare_parent\tensquare_user)
+2019-12-02 15:17:33 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-12-02 15:17:35 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-02 15:17:35 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 15:17:35 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-12-02 15:17:36 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1828ea2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:17:38 [main] INFO  [curity.servlet.UserDetailsServiceAutoConfiguration] : 
+
+Using generated security password: 95db52b0-3bfe-4a88-8102-c24198cf5de9
+
+2019-12-02 15:17:39 [main] INFO  [gframework.security.web.DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2af9a5ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@579846cc, org.springframework.security.web.header.HeaderWriterFilter@63a84bb6, org.springframework.security.web.authentication.logout.LogoutFilter@1377b1a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a826ff8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64f3ca6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34f23816, org.springframework.security.web.session.SessionManagementFilter@69ba3f4e, org.springframework.security.web.access.ExceptionTranslationFilter@2342f1ff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cca31fc]
+2019-12-02 15:17:41 [main] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:17:43 [main] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Attempting to connect to: [47.111.191.26:5672]
+2019-12-02 15:17:43 [main] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Created new connection: rabbitConnectionFactory#1c3b6963:0/SimpleConnection@43f99817 [delegate=amqp://root@47.111.191.26:5672/my_vhost, localPort= 59497]
+2019-12-02 15:17:44 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started UserTest in 12.068 seconds (JVM running for 13.754)
+2019-12-02 15:17:45 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Waiting for workers to finish.
+2019-12-02 15:17:46 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Successfully waited for workers to finish.
+2019-12-02 15:17:46 [Thread-2] INFO  [p.rabbit.listener.AbstractMessageListenerContainer] : Shutdown ignored - container is not active already
+2019-12-02 15:17:46 [Thread-2] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:18:43 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Starting UserTest on DESKTOP-BM2NUKP with PID 8400 (started by Administrator in E:\web_demo\tensquare_parent\tensquare_user)
+2019-12-02 15:18:43 [main] INFO  [org.springframework.boot.SpringApplication        ] : No active profile set, falling back to default profiles: default
+2019-12-02 15:18:44 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-02 15:18:44 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 15:18:44 [main] INFO  [.repository.config.RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2019-12-02 15:18:45 [main] INFO  [essorRegistrationDelegate$BeanPostProcessorChecker] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a34e613] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:18:46 [main] INFO  [curity.servlet.UserDetailsServiceAutoConfiguration] : 
+
+Using generated security password: bdded8ae-39e1-4511-9423-d0cd9812578b
+
+2019-12-02 15:18:47 [main] INFO  [gframework.security.web.DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5416f8db, org.springframework.security.web.context.SecurityContextPersistenceFilter@1943c1f2, org.springframework.security.web.header.HeaderWriterFilter@7a3b7122, org.springframework.security.web.authentication.logout.LogoutFilter@d902300, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e1eeedd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@650c405c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64e1377c, org.springframework.security.web.session.SessionManagementFilter@163042ea, org.springframework.security.web.access.ExceptionTranslationFilter@2fe74516, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@441fbe89]
+2019-12-02 15:18:48 [main] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:18:48 [main] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Attempting to connect to: [47.111.191.26:5672]
+2019-12-02 15:18:49 [main] INFO  [k.amqp.rabbit.connection.AbstractConnectionFactory] : Created new connection: rabbitConnectionFactory#288f173f:0/SimpleConnection@35bd8bc9 [delegate=amqp://root@47.111.191.26:5672/my_vhost, localPort= 59553]
+2019-12-02 15:18:49 [main] INFO  [org.springframework.boot.StartupInfoLogger        ] : Started UserTest in 7.104 seconds (JVM running for 8.376)
+2019-12-02 15:18:49 [main] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} inited
+2019-12-02 15:18:51 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Waiting for workers to finish.
+2019-12-02 15:18:51 [Thread-2] INFO  [mqp.rabbit.listener.SimpleMessageListenerContainer] : Successfully waited for workers to finish.
+2019-12-02 15:18:51 [Thread-2] INFO  [p.rabbit.listener.AbstractMessageListenerContainer] : Shutdown ignored - container is not active already
+2019-12-02 15:18:51 [Thread-2] INFO  [scheduling.concurrent.ExecutorConfigurationSupport] : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:18:51 [Thread-2] INFO  [com.alibaba.druid.pool.DruidDataSource            ] : {dataSource-1} closed
